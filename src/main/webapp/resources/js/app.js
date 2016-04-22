@@ -50,6 +50,4 @@ App.config(['$routeProvider', function ($routeProvider) {
     })
 
     $routeProvider.otherwise({redirectTo: '/todo'});
-}], ['$httpProvider', function ($httpProvider) {    
-	$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
 }]);
