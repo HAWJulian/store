@@ -5,7 +5,7 @@
 var StoreController = function($scope, $http) {
 
 	$scope.items = [ {
-		name : 'Käse',
+		name : 'KÃ¤se',
 		price : 1000,
 		make : 'Ja!',
 		needsCooling : true,
