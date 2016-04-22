@@ -9,19 +9,19 @@ var StoreController = function($scope, $http) {
 		price : 1000,
 		make : 'Ja!',
 		needsCooling : true,
-		//image: "./images/3.png"
+		image: "resources/images/3.png"
 	}, {
 		name : 'Wurst',
 		price : 10,
 		make : 'Nein?',
 		needsCooling : false,
-		//image: "./images/10.png"
+		image: "resources/images/10.png"
 	}, {
 		name : 'Marmelade',
 		price : 2,
 		make : 'Schwartau',
 		needsCooling : true,
-		//image: "./images/21.png"
+		image: "resources/images/21.png"
 	} ];
 
 }

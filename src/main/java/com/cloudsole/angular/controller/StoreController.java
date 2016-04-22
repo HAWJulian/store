@@ -15,5 +15,6 @@ public class StoreController {
     public String layout(){
         return "store/layout";
     }
+    //return all items from db
 
 }
