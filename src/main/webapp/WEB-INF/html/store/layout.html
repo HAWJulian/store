@@ -17,8 +17,29 @@
 				<li>
 					<h1>{{item.name}}</h1> <img src={{item.image}}>
 					<p>
-						ÄÄPreis: {{item.price}} <br> Marke: {{item.make}} <br>
-						Gekühlt?: {{item.needsCooling}}
+						Preis: {{item.price}} <br> Marke: {{item.make}} <br>
+						GekÃ¼hlt?: {{item.needsCooling}}<br>
+					<form ng-submit="submit(item)">
+						<div class="col-lg-8">
+							<input class="form-control" placeholder="Anzahl"  type="text"
+								required min="1" id="Anzahl" name="Anzahl" ng-model="item.amount"/>
+						</div>
+						<input type="submit" id="submit" value="Submit" />
+					</form>
+					</p>
+				</li>
+
+			</ul>
+		</div>
+		<div class="demo-content">
+			<h1>Warenkorb</h1>
+			<ul ng-repeat="product in cart track by $index">
+				<li>
+					<h1>{{product.name}}</h1>
+					<p>
+						Anzahl: {{product.amount}}<br>
+						Preis: {{product.price}} <br> 
+						Marke: {{product.make}} <br>
 					</p>
 				</li>
 
