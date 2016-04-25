@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Time: 5:27 PM
  */
 @Controller
-@RequestMapping(value = "/", produces = "text/plain;charset=UTF-8")
+@RequestMapping(value = "/")
 public class IndexController {
 
-    @RequestMapping(produces = "text/plain;charset=UTF-8")
+    @RequestMapping()
     public String getIndexPage() {
         return "index";
     }
