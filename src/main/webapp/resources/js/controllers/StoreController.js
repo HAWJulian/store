@@ -4,6 +4,7 @@
 
 var StoreController = function($scope, $http) {
 	index = 0;
+	$scope.totalCost = 0;
 	$scope.items = [ {
 		name : 'Käse',
 		price : 1000,
@@ -25,12 +26,20 @@ var StoreController = function($scope, $http) {
 	} ];
 	
 	$scope.cart = [];
-	//optional TODO: only add item to cart if item does not exist in cart
-	//else only update amount
+	//TODO: implement with controller
 	$scope.submit = function (item) {
 		item.index = index;
 		index++;
-		$scope.cart.push(item);
+		
+		if(!item.wasAdded)
+		{
+			$scope.cart.push(item);
+			item.amount = 0;
+		}
+		item.amount += item.newamount;
+		item.wasAdded = true;
+		
+		$scope.totalCost += item.newamount * item.price;
 	}
 
 }

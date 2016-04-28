@@ -17,14 +17,14 @@
 				<li>
 					<h3>{{item.name}}</h3> <img src={{item.image}}>
 					<p>
-						Preis: {{item.price}} <br> Marke: {{item.make}} <br>
+						Preis: {{item.price/100}}€ <br> Marke: {{item.make}} <br>
 						Gekühlt?: {{item.needsCooling}}<br>
 					<form ng-submit="submit(item)">
 						<div class="col-lg-8">
 							<input class="form-control" placeholder="Anzahl"  type="number"
-								required min="1" id="Anzahl" name="Anzahl" ng-model="item.amount"/>
+								required min="1" id="Anzahl" name="Anzahl" ng-model="item.newamount"/>
 						</div>
-						<input type="submit" id="submit" value="Submit" />
+						<input type="submit" id="submit" value="In den Warenkorb" />
 					</form>
 					</p>
 				</li>
@@ -38,12 +38,13 @@
 					<h1>{{product.name}}</h1>
 					<p>
 						Anzahl: {{product.amount}}<br>
-						Preis: {{product.price}} <br> 
+						Preis: {{product.price/100}}€ <br> 
 						Marke: {{product.make}} <br>
 					</p>
 				</li>
 
 			</ul>
+			<h1>Gesamtkosten: {{totalCost/100}}€</h1>
 		</div>
 		<!-- /.demo-content -->
 	</div>
