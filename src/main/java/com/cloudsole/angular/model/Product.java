@@ -1,6 +1,6 @@
 package com.cloudsole.angular.model;
 //describes attributes of a product
-public class Item
+public class Product
 {
 	private String name;
 	private int id;

@@ -7,46 +7,46 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Service;
 
-import com.cloudsole.angular.model.Item;
+import com.cloudsole.angular.model.Product;
 @Service
 public class StoreServiceImpl
 {
-	List<Item> items = new ArrayList<Item>();
+	List<Product> Products = new ArrayList<Product>();
     private static Long id = 0L;
-    //TODO: get items from database
+    //TODO: get Products from database
     
     @PostConstruct
-    public void setupItems(){
-        Item item1 = new Item();
-        item1.setBrand("asdf");
-        item1.setCategory("Marmelade");
-        item1.setSubcategory("Erbeermarmelade");
-        item1.setCooling(false);
-        item1.setName("Marmelde");
-        item1.setPrice(247);
+    public void setupProducts(){
+        Product Product1 = new Product();
+        Product1.setBrand("asdf");
+        Product1.setCategory("Marmelade");
+        Product1.setSubcategory("Erbeermarmelade");
+        Product1.setCooling(false);
+        Product1.setName("Marmelde");
+        Product1.setPrice(247);
         
-        Item item2 = new Item();
-        item2.setBrand("qwer");
-        item2.setCategory("Käse");
-        item2.setSubcategory("Gouda");
-        item2.setCooling(true);
-        item2.setName("Käsa");
-        item2.setPrice(149);
+        Product Product2 = new Product();
+        Product2.setBrand("qwer");
+        Product2.setCategory("Käse");
+        Product2.setSubcategory("Gouda");
+        Product2.setCooling(true);
+        Product2.setName("Käsa");
+        Product2.setPrice(149);
         
-        Item item3 = new Item();
-        item3.setBrand("yxcv");
-        item3.setCategory("Wurst");
-        item3.setSubcategory("Leberwurst");
-        item3.setCooling(true);
-        item3.setName("Wurst");
-        item3.setPrice(199);
+        Product Product3 = new Product();
+        Product3.setBrand("yxcv");
+        Product3.setCategory("Wurst");
+        Product3.setSubcategory("Leberwurst");
+        Product3.setCooling(true);
+        Product3.setName("Wurst");
+        Product3.setPrice(199);
         
-        items.add(item1);
-        items.add(item2);
-        items.add(item3);
+        Products.add(Product1);
+        Products.add(Product2);
+        Products.add(Product3);
     }
 
-    public List<Item> viewAllItems() {
-        return items;
+    public List<Product> viewAllProducts() {
+        return Products;
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.cloudsole.angular.model.Item;
+import com.cloudsole.angular.model.Product;
 import com.cloudsole.angular.service.StoreService;
 
 /**
@@ -24,7 +24,7 @@ public class StoreController {
     StoreService storeservice;
 
     @RequestMapping(value = "/all.json", method = RequestMethod.GET)
-    public @ResponseBody List<Item> viewAllItems(){
+    public @ResponseBody List<Product> viewAllItems(){
         return storeservice.viewAllItems();
     }
     */
