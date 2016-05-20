@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.cloudsole.angular.model.Product;
 @Service
-public class StoreServiceImpl
+public class StoreServiceImpl implements StoreService
 {
 	List<Product> Products = new ArrayList<Product>();
     private static Long id = 0L;
@@ -30,7 +30,7 @@ public class StoreServiceImpl
         Product2.setCategory("Käse");
         Product2.setSubcategory("Gouda");
         Product2.setCooling(true);
-        Product2.setName("Käsa");
+        Product2.setName("KÄääÄÖöÜöüüüßse");
         Product2.setPrice(149);
         
         Product Product3 = new Product();

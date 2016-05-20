@@ -5,6 +5,7 @@
 var StoreController = function($scope, $http) {
 	index = 0;
 	$scope.totalCost = 0;
+	/*
 	$scope.items = [ {
 		name : 'Käse',
 		price : 1000,
@@ -24,7 +25,13 @@ var StoreController = function($scope, $http) {
 		needsCooling : true,
 		image: "resources/images/21.png"
 	} ];
-	
+	*/
+	$scope.viewAllProducts = function(){
+        $http.get('store/all.json', {header : {'Content-Type' : 'application/json; charset=UTF-8'}}).success(function(response){
+            $scope.items = response;
+        })
+    }
+	$scope.viewAllProducts();
 	$scope.cart = [];
 	//TODO: implement with controller
 	$scope.submit = function (item) {

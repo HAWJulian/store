@@ -7,6 +7,6 @@ import com.cloudsole.angular.model.Product;
 public interface StoreService
 {
 
-	List<Product> viewAllItems();
+	List<Product> viewAllProducts();
     
 }

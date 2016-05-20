@@ -19,15 +19,15 @@ import com.cloudsole.angular.service.StoreService;
 @RequestMapping("/store")
 public class StoreController {
 
-	/*
+	
 	@Autowired
     StoreService storeservice;
 
     @RequestMapping(value = "/all.json", method = RequestMethod.GET)
-    public @ResponseBody List<Product> viewAllItems(){
-        return storeservice.viewAllItems();
+    public @ResponseBody List<Product> viewAllProducts(){
+        return storeservice.viewAllProducts();
     }
-    */
+    
     
     @RequestMapping("/layout")
     public String layout(){
