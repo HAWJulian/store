@@ -4,36 +4,20 @@
 
 var StoreController = function($scope, $http) {
 	index = 0;
+	//probably not needed since we probably wont calculate the total cost
 	$scope.totalCost = 0;
-	/*
-	$scope.items = [ {
-		name : 'Käse',
-		price : 1000,
-		make : 'Ja!',
-		needsCooling : true,
-		image: "resources/images/3.png"
-	}, {
-		name : 'Wurst',
-		price : 10,
-		make : 'Nein?',
-		needsCooling : false,
-		image: "resources/images/10.png"
-	}, {
-		name : 'Marmelade',
-		price : 2,
-		make : 'Schwartau',
-		needsCooling : true,
-		image: "resources/images/21.png"
-	} ];
-	*/
+	
+	//fetches the store/all.json from StoreController.java (which returns all products defined @StoreServiceImpl)
 	$scope.viewAllProducts = function(){
         $http.get('store/all.json').success(function(response){
             $scope.items = response;
         })
     }
+	//call the viewAllProducts function on js load
 	$scope.viewAllProducts();
+	//currently defines the products in a customers cart
 	$scope.cart = [];
-	//TODO: implement with controller
+	//adds x amount of y item to the cart and updates the total cost
 	$scope.submit = function (item) {
 		item.index = index;
 		index++;

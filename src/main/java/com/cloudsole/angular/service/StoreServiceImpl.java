@@ -30,7 +30,7 @@ public class StoreServiceImpl implements StoreService
         Product2.setCategory("Käse");
         Product2.setSubcategory("Gouda");
         Product2.setCooling(true);
-        Product2.setName("KÄääÄÖöÜöüüüßse");
+        Product2.setName("Käse");
         Product2.setPrice(149);
         
         Product Product3 = new Product();
