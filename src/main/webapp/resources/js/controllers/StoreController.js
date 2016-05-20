@@ -27,7 +27,7 @@ var StoreController = function($scope, $http) {
 	} ];
 	*/
 	$scope.viewAllProducts = function(){
-        $http.get('store/all.json', {header : {'Content-Type' : 'application/json; charset=UTF-8'}}).success(function(response){
+        $http.get('store/all.json').success(function(response){
             $scope.items = response;
         })
     }

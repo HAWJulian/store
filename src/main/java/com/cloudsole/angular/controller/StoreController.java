@@ -23,7 +23,7 @@ public class StoreController {
 	@Autowired
     StoreService storeservice;
 
-    @RequestMapping(value = "/all.json", method = RequestMethod.GET)
+    @RequestMapping(value = "/all.json", method = RequestMethod.GET, produces={"application/json; charset=UTF-8"})
     public @ResponseBody List<Product> viewAllProducts(){
         return storeservice.viewAllProducts();
     }
