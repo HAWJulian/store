@@ -55,15 +55,19 @@ public class StoreServiceImpl implements StoreService
 	{
 		//create new category list
 		List<Category> categories = new ArrayList<Category>();
+		List<Category> subcategories = new ArrayList<Category>();
 		//run over all products
 		for(int i = 0; i < products.size(); i++)
 		{
 			//try to find current product's category in categories
 			int index = findCategory(categories, products.get(i).getCategory());
+			//try to find current product's subcategory in subcategories
+			int subindex = findCategory(subcategories, products.get(i).getSubcategory());
 			//if category doesn't exist create new category and add it to the list
 			if(index < 0)
 			{
 				Category temp = new Category();
+				temp.setSubcategory(false);
 				temp.setName(products.get(i).getCategory());
 				List<Product> templist = new ArrayList<Product>();
 				templist.add(products.get(i));
@@ -77,7 +81,26 @@ public class StoreServiceImpl implements StoreService
 				tempprods.add(products.get(i));
 				categories.get(index).setItems(tempprods);
 			}
+			//if not found, add the subcategory
+			if(subindex < 0)
+			{
+				Category temp = new Category();
+				temp.setSubcategory(true);
+				temp.setName(products.get(i).getSubcategory());
+				List<Product> templist = new ArrayList<Product>();
+				templist.add(products.get(i));
+				temp.setItems(templist);
+				subcategories.add(temp);
+			}
+			//else add item to subcategory
+			else
+			{
+				List<Product> tempprods = subcategories.get(subindex).getItems();
+				tempprods.add(products.get(i));
+				subcategories.get(subindex).setItems(tempprods);
+			}
 		}
+		categories.addAll(subcategories);
 		return categories;
 	}
 
