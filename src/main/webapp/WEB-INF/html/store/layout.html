@@ -16,8 +16,11 @@
 				<li>
 					<h3>{{item.name}}</h3>
 					<p>
-						Preis: {{item.price/100}}€ <br> Marke: {{item.brand}} <br>
-						Gekühlt?: {{item.cooling}}<br>
+						Price: {{item.price/100}}€ <br> 
+						Brand: {{item.brand}} <br>
+						Needs cooling?: {{item.cooling}}<br>
+						Category: {{item.category}}<br>
+						Subcategory: {{item.subcategory}}
 					<form ng-submit="submit(item)">
 						<div class="col-lg-8">
 							<input class="form-control" placeholder="Anzahl"  type="number"
@@ -29,9 +32,16 @@
 				</li>
 
 			</ul>
+			<ul ng-repeat="category in categories | filter:searchStore">
+				<li>
+					<h3>{{category.name}}</h3>
+					<p>
+						Contains: {{category.items}}
+				</li>
+			</ul>
 		</div>
 		<div class="demo-content">
-			<h1>Warenkorb</h1>
+			<h1>Cart</h1>
 			<ul ng-repeat="product in cart track by $index">
 				<li>
 					<h1>{{product.name}}</h1>

@@ -10,7 +10,8 @@ var StoreController = function($scope, $http) {
 	//fetches the store/all.json from StoreController.java (which returns all products defined @StoreServiceImpl)
 	$scope.viewAllProducts = function(){
         $http.get('store/all.json').success(function(response){
-            $scope.items = response;
+            $scope.items = response.products;
+            $scope.categories = response.categories;
         })
     }
 	//call the viewAllProducts function on js load
