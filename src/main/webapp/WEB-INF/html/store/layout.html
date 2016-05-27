@@ -11,35 +11,18 @@
 				</button>
 			</span>
 		</div>
-		<div class="demo-content">
-			<ul ng-repeat="item in items | filter:searchStore">
-				<li>
-					<h3>{{item.name}}</h3>
-					<p>
-						Price: {{item.price/100}}€ <br> Brand: {{item.brand}} <br>
-						Needs cooling?: {{item.cooling}}<br> Category:
-						{{item.category}}<br> Subcategory: {{item.subcategory}}
-					<form ng-submit="submit(item)">
-						<div class="col-lg-8">
-							<input class="form-control" placeholder="Anzahl" type="number"
-								required min="1" id="Anzahl" name="Anzahl"
-								ng-model="item.newamount" />
-						</div>
-						<input type="submit" id="submit" value="Add to cart" />
-					</form>
-					</p>
-				</li>
-			</ul>
-			<ul ng-repeat="category in categories | filter:searchStore">
-				<li>
-					<h3>{{category.name}}</h3>
-					<p>Contains: {{category.items}}
-					<ul ng-repeat="item in category.items">
-						<li><span> {{item.bio ? 'BIO' : 'NICHTBIO'}} </span></li>
-					</ul>
-					</p>
-				</li>
-			</ul>
+		<div>
+			<md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4"
+				md-cols-gt-md="6" md-row-height-gt-md="2:2" md-row-height="1:1"
+				md-gutter="12px" md-gutter-gt-sm="8px"> <md-grid-tile ng-style="{ background: 'red'}"
+				ng-repeat="item in items | filter:searchStore"> <md-grid-tile-footer>
+			<h5>{{item.name}}</h5>
+			</md-grid-tile-footer> </md-grid-tile>
+			<md-grid-tile
+				ng-repeat="category in categories | filter:searchStore" style="background:{{category.subcategory?'green':'blue'}}"> <md-grid-tile-footer>
+			<h5>{{category.name}}</h5>
+			</md-grid-tile-footer> </md-grid-tile>
+			 </md-grid-list>
 		</div>
 		<div class="demo-content">
 			<h1>Cart</h1>

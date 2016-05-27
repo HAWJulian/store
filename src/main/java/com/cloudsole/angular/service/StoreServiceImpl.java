@@ -23,7 +23,7 @@ public class StoreServiceImpl implements StoreService
         Product1.setCategory("Marmelade");
         Product1.setSubcategory("Erbeermarmelade");
         Product1.setCooling(false);
-        Product1.setName("Marmelde");
+        Product1.setName("Schwartau Erdbeermarmelade 200g");
         Product1.setPrice(247);
         
         Product Product2 = new Product();
@@ -51,10 +51,40 @@ public class StoreServiceImpl implements StoreService
         Product4.setPrice(190);
         Product4.setBio(true);
         
+        Product Product5 = new Product();
+        Product5.setName("new Item5");
+        Product5.setCategory("Wurst");
+        Product5.setSubcategory("Leberwurst");
+        
+        Product Product6 = new Product();
+        Product6.setName("new Item6");
+        Product6.setCategory("Wurst");
+        Product6.setSubcategory("Leberwurst");
+        
+        Product Product7 = new Product();
+        Product7.setName("new Item7");
+        Product7.setCategory("Wurst");
+        Product7.setSubcategory("Leberwurst");
+        
+        Product Product8 = new Product();
+        Product8.setName("new Item8");
+        Product8.setCategory("Wurst");
+        Product8.setSubcategory("Leberwurst");
+        
+        Product Product9 = new Product();
+        Product9.setName("new Item9");
+        Product9.setCategory("Wurst");
+        Product9.setSubcategory("Leberwurst");
+        
         Products.add(Product1);
         Products.add(Product2);
         Products.add(Product3);
         Products.add(Product4);
+        Products.add(Product5);
+        Products.add(Product6);
+        Products.add(Product7);
+        Products.add(Product8);
+        Products.add(Product9);
     }
 
     public List<Product> viewAllProducts() {
