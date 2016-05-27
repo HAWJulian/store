@@ -42,9 +42,18 @@ public class StoreServiceImpl implements StoreService
         Product3.setName("Wurst");
         Product3.setPrice(199);
         
+        Product Product4 = new Product();
+        Product4.setBrand("jkl!");
+        Product4.setCategory("Wurst");
+        Product4.setSubcategory("Salami");
+        Product4.setCooling(true);
+        Product4.setName("Bergsalami 125g");
+        Product4.setPrice(190);
+        
         Products.add(Product1);
         Products.add(Product2);
         Products.add(Product3);
+        Products.add(Product4);
     }
 
     public List<Product> viewAllProducts() {

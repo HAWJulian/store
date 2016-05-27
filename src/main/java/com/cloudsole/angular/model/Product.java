@@ -5,10 +5,12 @@ public class Product
 	private String name;
 	private int id;
 	private boolean cooling;
+	//price in cents
 	private int price;
 	private String brand;
 	private String category;
 	private String subcategory;
+	private boolean isBio;
 	public String getName()
 	{
 		return name;
@@ -64,5 +66,13 @@ public class Product
 	public void setSubcategory(String subcategory)
 	{
 		this.subcategory = subcategory;
+	}
+	public boolean isBio()
+	{
+		return isBio;
+	}
+	public void setBio(boolean isBio)
+	{
+		this.isBio = isBio;
 	}
 }

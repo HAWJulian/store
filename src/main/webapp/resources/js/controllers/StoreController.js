@@ -16,7 +16,7 @@ var StoreController = function($scope, $http) {
     }
 	//call the viewAllProducts function on js load
 	$scope.viewAllProducts();
-	//currently defines the products in a customers cart
+	//defines the products in a customers cart
 	$scope.cart = [];
 	//adds x amount of y item to the cart and updates the total cost
 	$scope.submit = function (item) {

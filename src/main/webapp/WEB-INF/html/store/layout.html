@@ -16,27 +16,24 @@
 				<li>
 					<h3>{{item.name}}</h3>
 					<p>
-						Price: {{item.price/100}}€ <br> 
-						Brand: {{item.brand}} <br>
-						Needs cooling?: {{item.cooling}}<br>
-						Category: {{item.category}}<br>
-						Subcategory: {{item.subcategory}}
+						Price: {{item.price/100}}€ <br> Brand: {{item.brand}} <br>
+						Needs cooling?: {{item.cooling}}<br> Category:
+						{{item.category}}<br> Subcategory: {{item.subcategory}}
 					<form ng-submit="submit(item)">
 						<div class="col-lg-8">
-							<input class="form-control" placeholder="Anzahl"  type="number"
-								required min="1" id="Anzahl" name="Anzahl" ng-model="item.newamount"/>
+							<input class="form-control" placeholder="Anzahl" type="number"
+								required min="1" id="Anzahl" name="Anzahl"
+								ng-model="item.newamount" />
 						</div>
 						<input type="submit" id="submit" value="Add to cart" />
 					</form>
 					</p>
 				</li>
-
 			</ul>
 			<ul ng-repeat="category in categories | filter:searchStore">
 				<li>
 					<h3>{{category.name}}</h3>
-					<p>
-						Contains: {{category.items}}
+					<p>Contains: {{category.items}}
 				</li>
 			</ul>
 		</div>
@@ -46,9 +43,8 @@
 				<li>
 					<h1>{{product.name}}</h1>
 					<p>
-						Anzahl: {{product.amount}}<br>
-						Preis: {{product.price/100}}€ <br> 
-						Marke: {{product.brand}} <br>
+						Anzahl: {{product.amount}}<br> Preis: {{product.price/100}}€
+						<br> Marke: {{product.brand}} <br>
 					</p>
 				</li>
 
