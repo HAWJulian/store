@@ -34,6 +34,10 @@
 				<li>
 					<h3>{{category.name}}</h3>
 					<p>Contains: {{category.items}}
+					<ul ng-repeat="item in category.items">
+						<li><span> {{item.bio ? 'BIO' : 'NICHTBIO'}} </span></li>
+					</ul>
+					</p>
 				</li>
 			</ul>
 		</div>

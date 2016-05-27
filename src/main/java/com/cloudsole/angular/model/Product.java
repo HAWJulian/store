@@ -11,6 +11,7 @@ public class Product
 	private String category;
 	private String subcategory;
 	private boolean isBio;
+	private boolean isVegeterian;
 	public String getName()
 	{
 		return name;
@@ -74,5 +75,13 @@ public class Product
 	public void setBio(boolean isBio)
 	{
 		this.isBio = isBio;
+	}
+	public boolean isVegeterian()
+	{
+		return isVegeterian;
+	}
+	public void setVegetarian(boolean isVegetarian)
+	{
+		this.isVegeterian = isVegetarian;
 	}
 }

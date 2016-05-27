@@ -49,6 +49,7 @@ public class StoreServiceImpl implements StoreService
         Product4.setCooling(true);
         Product4.setName("Bergsalami 125g");
         Product4.setPrice(190);
+        Product4.setBio(true);
         
         Products.add(Product1);
         Products.add(Product2);
